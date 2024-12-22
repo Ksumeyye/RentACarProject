@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RentACarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TblArac">
+          <Key>
+            <PropertyRef Name="AracID" />
+          </Key>
+          <Property Name="AracID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Plaka" Type="nvarchar" MaxLength="50" />
+          <Property Name="Marka" Type="varchar" MaxLength="50" />
+          <Property Name="Seri" Type="varchar" MaxLength="50" />
+          <Property Name="Yil" Type="int" />
+          <Property Name="Renk" Type="varchar" MaxLength="50" />
+          <Property Name="Kilometre" Type="int" />
+          <Property Name="YakitTuru" Type="varchar" MaxLength="50" />
+          <Property Name="GunlukKiraUcreti" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Resim" Type="varchar" MaxLength="50" />
+          <Property Name="Tarih" Type="varchar" MaxLength="10" />
+          <Property Name="Durum" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblMusteri">
+          <Key>
+            <PropertyRef Name="MusteriID" />
+          </Key>
+          <Property Name="MusteriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MusteriTC" Type="char" MaxLength="11" />
+          <Property Name="Ad" Type="varchar" MaxLength="30" />
+          <Property Name="Soyad" Type="varchar" MaxLength="30" />
+          <Property Name="Telefon" Type="varchar" MaxLength="15" />
+          <Property Name="EhliyetTarih" Type="varchar" MaxLength="10" />
+          <Property Name="Adres" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TblSozlesme">
+          <Key>
+            <PropertyRef Name="SozlesmeID" />
+          </Key>
+          <Property Name="SozlesmeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KiraSekli" Type="varchar" MaxLength="50" />
+          <Property Name="KiraGunSayisi" Type="int" />
+          <Property Name="ToplamTutar" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="AlisTarih" Type="varchar" MaxLength="10" />
+          <Property Name="TeslimTarih" Type="varchar" MaxLength="10" />
+          <Property Name="AracID" Type="int" />
+          <Property Name="MusteriID" Type="int" />
+        </EntityType>
+        <Association Name="FK_TblSozlesme_TblArac">
+          <End Role="TblArac" Type="Self.TblArac" Multiplicity="0..1" />
+          <End Role="TblSozlesme" Type="Self.TblSozlesme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblArac">
+              <PropertyRef Name="AracID" />
+            </Principal>
+            <Dependent Role="TblSozlesme">
+              <PropertyRef Name="AracID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblSozlesme_TblMusteri">
+          <End Role="TblMusteri" Type="Self.TblMusteri" Multiplicity="0..1" />
+          <End Role="TblSozlesme" Type="Self.TblSozlesme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblMusteri">
+              <PropertyRef Name="MusteriID" />
+            </Principal>
+            <Dependent Role="TblSozlesme">
+              <PropertyRef Name="MusteriID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="RentACarModelStoreContainer">
+          <EntitySet Name="TblArac" EntityType="Self.TblArac" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblMusteri" EntityType="Self.TblMusteri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblSozlesme" EntityType="Self.TblSozlesme" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TblSozlesme_TblArac" Association="Self.FK_TblSozlesme_TblArac">
+            <End Role="TblArac" EntitySet="TblArac" />
+            <End Role="TblSozlesme" EntitySet="TblSozlesme" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblSozlesme_TblMusteri" Association="Self.FK_TblSozlesme_TblMusteri">
+            <End Role="TblMusteri" EntitySet="TblMusteri" />
+            <End Role="TblSozlesme" EntitySet="TblSozlesme" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RentACarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TblArac">
+          <Key>
+            <PropertyRef Name="AracID" />
+          </Key>
+          <Property Name="AracID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Plaka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Marka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Seri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Yil" Type="Int32" />
+          <Property Name="Renk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Kilometre" Type="Int32" />
+          <Property Name="YakitTuru" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GunlukKiraUcreti" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Resim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tarih" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Durum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TblSozlesme" Relationship="Self.FK_TblSozlesme_TblArac" FromRole="TblArac" ToRole="TblSozlesme" />
+        </EntityType>
+        <EntityType Name="TblMusteri">
+          <Key>
+            <PropertyRef Name="MusteriID" />
+          </Key>
+          <Property Name="MusteriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MusteriTC" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Soyad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Telefon" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="EhliyetTarih" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Adres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TblSozlesme" Relationship="Self.FK_TblSozlesme_TblMusteri" FromRole="TblMusteri" ToRole="TblSozlesme" />
+        </EntityType>
+        <EntityType Name="TblSozlesme">
+          <Key>
+            <PropertyRef Name="SozlesmeID" />
+          </Key>
+          <Property Name="SozlesmeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KiraSekli" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="KiraGunSayisi" Type="Int32" />
+          <Property Name="ToplamTutar" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AlisTarih" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TeslimTarih" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AracID" Type="Int32" />
+          <Property Name="MusteriID" Type="Int32" />
+          <NavigationProperty Name="TblArac" Relationship="Self.FK_TblSozlesme_TblArac" FromRole="TblSozlesme" ToRole="TblArac" />
+          <NavigationProperty Name="TblMusteri" Relationship="Self.FK_TblSozlesme_TblMusteri" FromRole="TblSozlesme" ToRole="TblMusteri" />
+        </EntityType>
+        <Association Name="FK_TblSozlesme_TblArac">
+          <End Role="TblArac" Type="Self.TblArac" Multiplicity="0..1" />
+          <End Role="TblSozlesme" Type="Self.TblSozlesme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblArac">
+              <PropertyRef Name="AracID" />
+            </Principal>
+            <Dependent Role="TblSozlesme">
+              <PropertyRef Name="AracID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblSozlesme_TblMusteri">
+          <End Role="TblMusteri" Type="Self.TblMusteri" Multiplicity="0..1" />
+          <End Role="TblSozlesme" Type="Self.TblSozlesme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblMusteri">
+              <PropertyRef Name="MusteriID" />
+            </Principal>
+            <Dependent Role="TblSozlesme">
+              <PropertyRef Name="MusteriID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="RentACarEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TblArac" EntityType="Self.TblArac" />
+          <EntitySet Name="TblMusteri" EntityType="Self.TblMusteri" />
+          <EntitySet Name="TblSozlesme" EntityType="Self.TblSozlesme" />
+          <AssociationSet Name="FK_TblSozlesme_TblArac" Association="Self.FK_TblSozlesme_TblArac">
+            <End Role="TblArac" EntitySet="TblArac" />
+            <End Role="TblSozlesme" EntitySet="TblSozlesme" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblSozlesme_TblMusteri" Association="Self.FK_TblSozlesme_TblMusteri">
+            <End Role="TblMusteri" EntitySet="TblMusteri" />
+            <End Role="TblSozlesme" EntitySet="TblSozlesme" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RentACarModelStoreContainer" CdmEntityContainer="RentACarEntities1">
+          <EntitySetMapping Name="TblArac">
+            <EntityTypeMapping TypeName="RentACarModel.TblArac">
+              <MappingFragment StoreEntitySet="TblArac">
+                <ScalarProperty Name="AracID" ColumnName="AracID" />
+                <ScalarProperty Name="Plaka" ColumnName="Plaka" />
+                <ScalarProperty Name="Marka" ColumnName="Marka" />
+                <ScalarProperty Name="Seri" ColumnName="Seri" />
+                <ScalarProperty Name="Yil" ColumnName="Yil" />
+                <ScalarProperty Name="Renk" ColumnName="Renk" />
+                <ScalarProperty Name="Kilometre" ColumnName="Kilometre" />
+                <ScalarProperty Name="YakitTuru" ColumnName="YakitTuru" />
+                <ScalarProperty Name="GunlukKiraUcreti" ColumnName="GunlukKiraUcreti" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblMusteri">
+            <EntityTypeMapping TypeName="RentACarModel.TblMusteri">
+              <MappingFragment StoreEntitySet="TblMusteri">
+                <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
+                <ScalarProperty Name="MusteriTC" ColumnName="MusteriTC" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="EhliyetTarih" ColumnName="EhliyetTarih" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblSozlesme">
+            <EntityTypeMapping TypeName="RentACarModel.TblSozlesme">
+              <MappingFragment StoreEntitySet="TblSozlesme">
+                <ScalarProperty Name="SozlesmeID" ColumnName="SozlesmeID" />
+                <ScalarProperty Name="KiraSekli" ColumnName="KiraSekli" />
+                <ScalarProperty Name="KiraGunSayisi" ColumnName="KiraGunSayisi" />
+                <ScalarProperty Name="ToplamTutar" ColumnName="ToplamTutar" />
+                <ScalarProperty Name="AlisTarih" ColumnName="AlisTarih" />
+                <ScalarProperty Name="TeslimTarih" ColumnName="TeslimTarih" />
+                <ScalarProperty Name="AracID" ColumnName="AracID" />
+                <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

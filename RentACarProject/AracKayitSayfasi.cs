@@ -1,0 +1,57 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.Entity.Core.Metadata.Edm;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace RentACarProject
+{
+    public partial class AracKayitSayfasi : Form
+    {
+        public AracKayitSayfasi()
+        {
+            InitializeComponent();
+        }
+        RentACarEntities1 db = new RentACarEntities1();
+        private void AracKayitSayfasi_Load(object sender, EventArgs e)
+        {
+            var sozlesme = (from x in db.TblSozlesme select new { x.SozlesmeID, x.KiraSekli }).ToList();
+            CmbSozlesmeID.ValueMember = "ID";
+            CmbSozlesmeID.DisplayMember = "Kira Şekli";
+            CmbSozlesmeID.DataSource = sozlesme;
+        }
+
+        private void BtnAracKaydet_Click(object sender, EventArgs e)
+        {
+            TblArac a=new TblArac();
+            a.Plaka = TxtPlaka.Text;
+            a.Marka = CmbAracMarka.Text;
+            a.Seri = CmbAracSeri.Text;
+            a.Yil = int.Parse(TxtAracYili.Text);// veri tipim int idi fakat textin içine yadırmak istediğim için dönüşüm yapmam gerekiyordu.  parse methodu ile bir string'i int türüne dönüştür
+            a.Renk = TxtAracRenk.Text;
+            a.Kilometre = int.Parse(TxtAracKm.Text);
+            a.YakitTuru = CmbYakit.Text;
+            a.GunlukKiraUcreti = decimal.Parse(TxtKiraUcret.Text); //veri tipim decimal idi fakat textin içine yadırmak istediğim için dönüşüm yapmam gerekiyordu. parse methodu ile bir string'i decimal tipine dönüştürdüm.
+            a.Tarih = MskAracTarih.Text;
+            a.Durum = CmbAracDurum.Text;
+
+            db.TblArac.Add(a);
+            db.SaveChanges(); //Değişiklikleri Kaydet.
+            MessageBox.Show("Araç Eklendi.");
+
+
+        }
+
+        private void BtnListele_Click(object sender, EventArgs e)
+        {
+            FrmAracListeleme fr = new FrmAracListeleme();
+            fr.Show();
+            this.Hide();
+        }
+    }
+}
