@@ -19,13 +19,16 @@ namespace RentACarProject
         RentACarEntities1 db = new RentACarEntities1();
         private void FrmMusteriEkle_Load(object sender, EventArgs e)
         {
+            //var sozlesme = (from x in db.TblSozlesme select new { x.SozlesmeID, x.KiraSekli }).ToList();
+            //CmbSozlesmeID.ValueMember = "ID";
+            //CmbSozlesmeID.DisplayMember = "Kira Şekli";
+            //CmbSozlesmeID.DataSource = sozlesme;
 
         }
 
         private void BtnEkle_Click(object sender, EventArgs e)
         {
             TblMusteri t = new TblMusteri();
-            t.MusteriID = int.Parse(TxtMusteriID.Text);// veri tipim int idi fakat textin içine yadırmak istediğim için dönüşüm yapmam gerekiyordu.  parse methodu ile bir string'i int türüne dönüştür
             t.MusteriTC = MskMusteriTC.Text;
             t.Ad = TxtMusteriAd.Text;
             t.Soyad = TxtMusteriSoyad.Text;

@@ -32,6 +32,7 @@ namespace RentACarProject
         public string Resim { get; set; }
         public string Tarih { get; set; }
         public string Durum { get; set; }
+        public Nullable<bool> MusaitMi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TblSozlesme> TblSozlesme { get; set; }

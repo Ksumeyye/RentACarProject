@@ -45,18 +45,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.MskAracTarih = new System.Windows.Forms.MaskedTextBox();
-            this.CmbAracDurum = new System.Windows.Forms.ComboBox();
+            this.CmbAracMusaitMi = new System.Windows.Forms.ComboBox();
             this.TxtKiraUcret = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnSil = new System.Windows.Forms.Button();
             this.BtnListele = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.CmbSozlesmeID = new System.Windows.Forms.ComboBox();
             this.TxtAracYil = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.TxtTarih = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +62,7 @@
             // 
             this.BtnGuncelle.BackColor = System.Drawing.Color.PapayaWhip;
             this.BtnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnGuncelle.Location = new System.Drawing.Point(175, 373);
+            this.BtnGuncelle.Location = new System.Drawing.Point(45, 359);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(251, 34);
             this.BtnGuncelle.TabIndex = 42;
@@ -233,23 +231,16 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Araç ID:";
             // 
-            // MskAracTarih
+            // CmbAracMusaitMi
             // 
-            this.MskAracTarih.Location = new System.Drawing.Point(175, 276);
-            this.MskAracTarih.Name = "MskAracTarih";
-            this.MskAracTarih.Size = new System.Drawing.Size(121, 20);
-            this.MskAracTarih.TabIndex = 10;
-            // 
-            // CmbAracDurum
-            // 
-            this.CmbAracDurum.FormattingEnabled = true;
-            this.CmbAracDurum.Items.AddRange(new object[] {
+            this.CmbAracMusaitMi.FormattingEnabled = true;
+            this.CmbAracMusaitMi.Items.AddRange(new object[] {
             "Müsait",
             "Müsait Değil"});
-            this.CmbAracDurum.Location = new System.Drawing.Point(175, 329);
-            this.CmbAracDurum.Name = "CmbAracDurum";
-            this.CmbAracDurum.Size = new System.Drawing.Size(247, 21);
-            this.CmbAracDurum.TabIndex = 11;
+            this.CmbAracMusaitMi.Location = new System.Drawing.Point(175, 302);
+            this.CmbAracMusaitMi.Name = "CmbAracMusaitMi";
+            this.CmbAracMusaitMi.Size = new System.Drawing.Size(121, 21);
+            this.CmbAracMusaitMi.TabIndex = 11;
             // 
             // TxtKiraUcret
             // 
@@ -257,26 +248,6 @@
             this.TxtKiraUcret.Name = "TxtKiraUcret";
             this.TxtKiraUcret.Size = new System.Drawing.Size(121, 20);
             this.TxtKiraUcret.TabIndex = 9;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(89, 328);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 16);
-            this.label12.TabIndex = 47;
-            this.label12.Text = "Durum:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(99, 281);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 16);
-            this.label11.TabIndex = 46;
-            this.label11.Text = "Tarih:";
             // 
             // label13
             // 
@@ -296,7 +267,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(974, 256);
             this.dataGridView1.TabIndex = 53;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // BtnSil
             // 
@@ -321,24 +292,6 @@
             this.BtnListele.UseVisualStyleBackColor = true;
             this.BtnListele.Click += new System.EventHandler(this.BtnListele_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(12, 303);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(130, 16);
-            this.label9.TabIndex = 56;
-            this.label9.Text = "Kiralanan Araçlar:";
-            // 
-            // CmbSozlesmeID
-            // 
-            this.CmbSozlesmeID.FormattingEnabled = true;
-            this.CmbSozlesmeID.Location = new System.Drawing.Point(175, 302);
-            this.CmbSozlesmeID.Name = "CmbSozlesmeID";
-            this.CmbSozlesmeID.Size = new System.Drawing.Size(247, 21);
-            this.CmbSozlesmeID.TabIndex = 57;
-            // 
             // TxtAracYil
             // 
             this.TxtAracYil.Location = new System.Drawing.Point(175, 146);
@@ -346,23 +299,48 @@
             this.TxtAracYil.Size = new System.Drawing.Size(121, 20);
             this.TxtAracYil.TabIndex = 58;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(98, 280);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 16);
+            this.label9.TabIndex = 59;
+            this.label9.Text = "Tarih:";
+            // 
+            // TxtTarih
+            // 
+            this.TxtTarih.Location = new System.Drawing.Point(175, 276);
+            this.TxtTarih.Name = "TxtTarih";
+            this.TxtTarih.Size = new System.Drawing.Size(121, 20);
+            this.TxtTarih.TabIndex = 60;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(70, 307);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 16);
+            this.label10.TabIndex = 62;
+            this.label10.Text = "Müsait Mi?";
+            // 
             // FrmAracListeleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Crimson;
-            this.ClientSize = new System.Drawing.Size(1448, 437);
-            this.Controls.Add(this.TxtAracYil);
-            this.Controls.Add(this.CmbSozlesmeID);
+            this.ClientSize = new System.Drawing.Size(1448, 418);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.TxtTarih);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.TxtAracYil);
             this.Controls.Add(this.BtnListele);
             this.Controls.Add(this.BtnSil);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.MskAracTarih);
-            this.Controls.Add(this.CmbAracDurum);
+            this.Controls.Add(this.CmbAracMusaitMi);
             this.Controls.Add(this.TxtKiraUcret);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.BtnGuncelle);
             this.Controls.Add(this.TxtAracRenk);
@@ -408,17 +386,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox MskAracTarih;
-        private System.Windows.Forms.ComboBox CmbAracDurum;
+        private System.Windows.Forms.ComboBox CmbAracMusaitMi;
         private System.Windows.Forms.TextBox TxtKiraUcret;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button BtnSil;
         private System.Windows.Forms.Button BtnListele;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox CmbSozlesmeID;
         private System.Windows.Forms.TextBox TxtAracYil;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox TxtTarih;
+        private System.Windows.Forms.Label label10;
     }
 }

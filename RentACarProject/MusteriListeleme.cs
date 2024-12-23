@@ -19,8 +19,22 @@ namespace RentACarProject
         RentACarEntities1 db = new RentACarEntities1();
         private void MusteriListeleme_Load(object sender, EventArgs e)
         {
-            var musteriler = db.TblMusteri.ToList(); //var bütün değişkenleri üzerine alır. Bu yüzden var kullandım.
-            dataGridView1.DataSource = musteriler;
+            //var musteriler = db.TblMusteri.ToList(); //var bütün değişkenleri üzerine alır. Bu yüzden var kullandım.
+            //dataGridView1.DataSource = musteriler;
+
+            dataGridView1.DataSource = (from x in db.TblMusteri
+                                        select new
+                                        {
+                                            x.MusteriID,
+                                            x.MusteriTC,
+                                            x.Ad,
+                                            x.Soyad,
+                                            x.Telefon,
+                                            x.EhliyetTarih,
+                                            x.Adres,
+                                            x.Email
+                                        }).ToList(); //Bu şekilde seçtiğim sütunlar datagridde listelenecek.
+
         }
 
         private void BtnSil_Click(object sender, EventArgs e)
@@ -54,5 +68,20 @@ namespace RentACarProject
             fr.Show();
             this.Hide();
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            TxtMusteriID.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            MskMusteriTC.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+            TxtMusteriAd.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
+            TxtMusteriSoyad.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            MskMusteriTelefon.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+            MskEhliyetTarih.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
+            TxtMusteriAdres.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
+            TxtMusteriEmail.Text = dataGridView1.Rows[secilen].Cells[7].Value.ToString();
+        }
+
+       
     }
 }

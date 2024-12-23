@@ -37,13 +37,14 @@
             this.BtnSozlesme = new System.Windows.Forms.Button();
             this.BtnCikis = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.BtnIstatistik = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 223);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 266);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(776, 215);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,12 +133,25 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "PIERRE RENT A CAR";
             // 
+            // BtnIstatistik
+            // 
+            this.BtnIstatistik.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnIstatistik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnIstatistik.Location = new System.Drawing.Point(252, 221);
+            this.BtnIstatistik.Name = "BtnIstatistik";
+            this.BtnIstatistik.Size = new System.Drawing.Size(297, 23);
+            this.BtnIstatistik.TabIndex = 9;
+            this.BtnIstatistik.Text = "İstatistikler";
+            this.BtnIstatistik.UseVisualStyleBackColor = true;
+            this.BtnIstatistik.Click += new System.EventHandler(this.BtnIstatistik_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Crimson;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 493);
+            this.Controls.Add(this.BtnIstatistik);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnCikis);
             this.Controls.Add(this.BtnSozlesme);
@@ -165,6 +179,7 @@
         private System.Windows.Forms.Button BtnSozlesme;
         private System.Windows.Forms.Button BtnCikis;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BtnIstatistik;
     }
 }
 

@@ -48,13 +48,11 @@
             this.CmbAracMarka = new System.Windows.Forms.ComboBox();
             this.CmbAracSeri = new System.Windows.Forms.ComboBox();
             this.CmbYakit = new System.Windows.Forms.ComboBox();
-            this.CmbAracDurum = new System.Windows.Forms.ComboBox();
+            this.CmbAracMusaitMi = new System.Windows.Forms.ComboBox();
             this.TxtAracRenk = new System.Windows.Forms.TextBox();
             this.MskAracTarih = new System.Windows.Forms.MaskedTextBox();
             this.BtnAracKaydet = new System.Windows.Forms.Button();
             this.BtnListele = new System.Windows.Forms.Button();
-            this.CmbSozlesmeID = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -161,11 +159,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(542, 88);
+            this.label12.Location = new System.Drawing.Point(518, 87);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 16);
+            this.label12.Size = new System.Drawing.Size(80, 16);
             this.label12.TabIndex = 11;
-            this.label12.Text = "Durum:";
+            this.label12.Text = "Müsait Mi?";
             // 
             // TxtAracID
             // 
@@ -256,16 +254,16 @@
             this.CmbYakit.Size = new System.Drawing.Size(100, 21);
             this.CmbYakit.TabIndex = 8;
             // 
-            // CmbAracDurum
+            // CmbAracMusaitMi
             // 
-            this.CmbAracDurum.FormattingEnabled = true;
-            this.CmbAracDurum.Items.AddRange(new object[] {
-            "Müsait",
-            "Müsait Değil"});
-            this.CmbAracDurum.Location = new System.Drawing.Point(605, 83);
-            this.CmbAracDurum.Name = "CmbAracDurum";
-            this.CmbAracDurum.Size = new System.Drawing.Size(121, 21);
-            this.CmbAracDurum.TabIndex = 11;
+            this.CmbAracMusaitMi.FormattingEnabled = true;
+            this.CmbAracMusaitMi.Items.AddRange(new object[] {
+            "Evet",
+            "Hayır"});
+            this.CmbAracMusaitMi.Location = new System.Drawing.Point(605, 83);
+            this.CmbAracMusaitMi.Name = "CmbAracMusaitMi";
+            this.CmbAracMusaitMi.Size = new System.Drawing.Size(121, 21);
+            this.CmbAracMusaitMi.TabIndex = 11;
             // 
             // TxtAracRenk
             // 
@@ -305,38 +303,17 @@
             this.BtnListele.UseVisualStyleBackColor = false;
             this.BtnListele.Click += new System.EventHandler(this.BtnListele_Click);
             // 
-            // CmbSozlesmeID
-            // 
-            this.CmbSozlesmeID.FormattingEnabled = true;
-            this.CmbSozlesmeID.Location = new System.Drawing.Point(206, 193);
-            this.CmbSozlesmeID.Name = "CmbSozlesmeID";
-            this.CmbSozlesmeID.Size = new System.Drawing.Size(247, 21);
-            this.CmbSozlesmeID.TabIndex = 59;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(70, 194);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(130, 16);
-            this.label13.TabIndex = 58;
-            this.label13.Text = "Kiralanan Araçlar:";
-            // 
             // AracKayitSayfasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Crimson;
             this.ClientSize = new System.Drawing.Size(800, 309);
-            this.Controls.Add(this.CmbSozlesmeID);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.BtnListele);
             this.Controls.Add(this.BtnAracKaydet);
             this.Controls.Add(this.MskAracTarih);
             this.Controls.Add(this.TxtAracRenk);
-            this.Controls.Add(this.CmbAracDurum);
+            this.Controls.Add(this.CmbAracMusaitMi);
             this.Controls.Add(this.CmbYakit);
             this.Controls.Add(this.CmbAracSeri);
             this.Controls.Add(this.CmbAracMarka);
@@ -360,7 +337,6 @@
             this.Name = "AracKayitSayfasi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Araç Kayıt Paneli";
-            this.Load += new System.EventHandler(this.AracKayitSayfasi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,12 +363,10 @@
         private System.Windows.Forms.ComboBox CmbAracMarka;
         private System.Windows.Forms.ComboBox CmbAracSeri;
         private System.Windows.Forms.ComboBox CmbYakit;
-        private System.Windows.Forms.ComboBox CmbAracDurum;
+        private System.Windows.Forms.ComboBox CmbAracMusaitMi;
         private System.Windows.Forms.TextBox TxtAracRenk;
         private System.Windows.Forms.MaskedTextBox MskAracTarih;
         private System.Windows.Forms.Button BtnAracKaydet;
         private System.Windows.Forms.Button BtnListele;
-        private System.Windows.Forms.ComboBox CmbSozlesmeID;
-        private System.Windows.Forms.Label label13;
     }
 }

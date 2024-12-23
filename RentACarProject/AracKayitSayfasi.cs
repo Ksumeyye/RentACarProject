@@ -18,13 +18,6 @@ namespace RentACarProject
             InitializeComponent();
         }
         RentACarEntities1 db = new RentACarEntities1();
-        private void AracKayitSayfasi_Load(object sender, EventArgs e)
-        {
-            var sozlesme = (from x in db.TblSozlesme select new { x.SozlesmeID, x.KiraSekli }).ToList();
-            CmbSozlesmeID.ValueMember = "ID";
-            CmbSozlesmeID.DisplayMember = "Kira Şekli";
-            CmbSozlesmeID.DataSource = sozlesme;
-        }
 
         private void BtnAracKaydet_Click(object sender, EventArgs e)
         {
@@ -38,7 +31,20 @@ namespace RentACarProject
             a.YakitTuru = CmbYakit.Text;
             a.GunlukKiraUcreti = decimal.Parse(TxtKiraUcret.Text); //veri tipim decimal idi fakat textin içine yadırmak istediğim için dönüşüm yapmam gerekiyordu. parse methodu ile bir string'i decimal tipine dönüştürdüm.
             a.Tarih = MskAracTarih.Text;
-            a.Durum = CmbAracDurum.Text;
+            
+            if(CmbAracMusaitMi.Text=="Evet")
+            {
+                a.MusaitMi = true;
+            }
+            else if (CmbAracMusaitMi.Text=="Hayır")
+            {
+                a.MusaitMi = false;
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Evet ya da Hayır Seçin. ");
+                return;
+            }
 
             db.TblArac.Add(a);
             db.SaveChanges(); //Değişiklikleri Kaydet.

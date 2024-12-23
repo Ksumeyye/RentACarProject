@@ -60,5 +60,12 @@ namespace RentACarProject
             fr.Show();
             this.Hide();
         }
+
+        private void BtnIstatistik_Click(object sender, EventArgs e)
+        {
+            FrmIstatistik fr = new FrmIstatistik();
+            fr.Show();
+            this.Hide();
+        }
     }
 }
