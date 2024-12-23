@@ -161,6 +161,8 @@
             this.Controls.Add(this.BtnMstrEkleme);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Araç Kiralama Ana Sayfa";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

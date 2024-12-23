@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="RentACarModel.TblSozlesme" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="RentACarModel.FK_TblSozlesme_TblArac" ManuallyRouted="false" />
         <AssociationConnector Association="RentACarModel.FK_TblSozlesme_TblMusteri" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RentACarModel.TblAdmin" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

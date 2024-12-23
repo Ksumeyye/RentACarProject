@@ -28,5 +28,6 @@ namespace RentACarProject
         public virtual DbSet<TblArac> TblArac { get; set; }
         public virtual DbSet<TblMusteri> TblMusteri { get; set; }
         public virtual DbSet<TblSozlesme> TblSozlesme { get; set; }
+        public virtual DbSet<TblAdmin> TblAdmin { get; set; }
     }
 }
