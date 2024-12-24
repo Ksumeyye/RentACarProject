@@ -9,7 +9,7 @@
 ✨Sözleşme panelinde kiralanacak araç için sözleşme yapılır. Sözleşme yaparken mevcutta olan tüm araçların Id'sini,plakasını,markasını,serisini,durumunu ve günlük kira ücretini görüntüleriz ona göre sözleşme işlemini yaparız. Ayrıca bu panelde de kaydet silme ve listeleme işlemlerini yapabiliriz.<br/>
 ✨İstatistik Sayfası ile sistemde kaydedilmiş toplam araç sayısını, toplam müşteri sayısını, toplam sözleşme sayısını, müsait araç sayısını, müsait olmayan araç sayısını, günlük ücreti en az olan aracı ve günlük ücreti en fazla olan arac bilgilerini güncel olarak görüntüleyebiliriz.<br/>
 
-# Kullanıcı Giriş <br/>
+# Kullanıcı Girişi <br/>
 ![KullaniciGiris-1](https://github.com/user-attachments/assets/330ac14f-b1f3-47cc-ab47-1f359c925a7a) <br/>
 # Ana Sayfa <br/>
 ![AnaSayfa-2](https://github.com/user-attachments/assets/094c96bc-fc8f-441b-adb6-c491d971b9e4) <br/>
