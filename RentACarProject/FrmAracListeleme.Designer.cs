@@ -55,6 +55,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.TxtTarih = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.BtnAnaSayfa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -326,12 +327,25 @@
             this.label10.TabIndex = 62;
             this.label10.Text = "Müsait Mi?";
             // 
+            // BtnAnaSayfa
+            // 
+            this.BtnAnaSayfa.BackColor = System.Drawing.Color.Red;
+            this.BtnAnaSayfa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnAnaSayfa.Location = new System.Drawing.Point(1297, 150);
+            this.BtnAnaSayfa.Name = "BtnAnaSayfa";
+            this.BtnAnaSayfa.Size = new System.Drawing.Size(124, 23);
+            this.BtnAnaSayfa.TabIndex = 63;
+            this.BtnAnaSayfa.Text = "Ana Sayfaya Dön";
+            this.BtnAnaSayfa.UseVisualStyleBackColor = false;
+            this.BtnAnaSayfa.Click += new System.EventHandler(this.BtnAnaSayfa_Click);
+            // 
             // FrmAracListeleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Crimson;
             this.ClientSize = new System.Drawing.Size(1448, 418);
+            this.Controls.Add(this.BtnAnaSayfa);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.TxtTarih);
             this.Controls.Add(this.label9);
@@ -398,5 +412,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TxtTarih;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button BtnAnaSayfa;
     }
 }

@@ -52,6 +52,7 @@
             this.BtnListele = new System.Windows.Forms.Button();
             this.CmbAracMusaitMi = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.BtnAnaSayfa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -205,9 +206,9 @@
             // 
             this.BtnKaydet.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.BtnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnKaydet.Location = new System.Drawing.Point(149, 245);
+            this.BtnKaydet.Location = new System.Drawing.Point(118, 248);
             this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(125, 30);
+            this.BtnKaydet.Size = new System.Drawing.Size(125, 27);
             this.BtnKaydet.TabIndex = 20;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.UseVisualStyleBackColor = false;
@@ -217,9 +218,9 @@
             // 
             this.BtnSil.BackColor = System.Drawing.Color.Bisque;
             this.BtnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnSil.Location = new System.Drawing.Point(694, 245);
+            this.BtnSil.Location = new System.Drawing.Point(472, 248);
             this.BtnSil.Name = "BtnSil";
-            this.BtnSil.Size = new System.Drawing.Size(140, 30);
+            this.BtnSil.Size = new System.Drawing.Size(140, 27);
             this.BtnSil.TabIndex = 21;
             this.BtnSil.Text = "Sil";
             this.BtnSil.UseVisualStyleBackColor = false;
@@ -245,9 +246,9 @@
             // 
             this.BtnListele.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.BtnListele.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnListele.Location = new System.Drawing.Point(428, 245);
+            this.BtnListele.Location = new System.Drawing.Point(293, 248);
             this.BtnListele.Name = "BtnListele";
-            this.BtnListele.Size = new System.Drawing.Size(125, 30);
+            this.BtnListele.Size = new System.Drawing.Size(125, 27);
             this.BtnListele.TabIndex = 24;
             this.BtnListele.Text = "Listele";
             this.BtnListele.UseVisualStyleBackColor = false;
@@ -268,11 +269,23 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(333, 178);
+            this.label10.Location = new System.Drawing.Point(266, 177);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(141, 20);
             this.label10.TabIndex = 25;
             this.label10.Text = "Müsait Değil Mi?";
+            // 
+            // BtnAnaSayfa
+            // 
+            this.BtnAnaSayfa.BackColor = System.Drawing.Color.Red;
+            this.BtnAnaSayfa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnAnaSayfa.Location = new System.Drawing.Point(666, 248);
+            this.BtnAnaSayfa.Name = "BtnAnaSayfa";
+            this.BtnAnaSayfa.Size = new System.Drawing.Size(120, 27);
+            this.BtnAnaSayfa.TabIndex = 26;
+            this.BtnAnaSayfa.Text = "Ana Sayfaya Dön";
+            this.BtnAnaSayfa.UseVisualStyleBackColor = false;
+            this.BtnAnaSayfa.Click += new System.EventHandler(this.BtnAnaSayfa_Click);
             // 
             // FrmSozlesme
             // 
@@ -280,6 +293,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Crimson;
             this.ClientSize = new System.Drawing.Size(926, 492);
+            this.Controls.Add(this.BtnAnaSayfa);
             this.Controls.Add(this.CmbAracMusaitMi);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.BtnListele);
@@ -340,5 +354,6 @@
         private System.Windows.Forms.Button BtnListele;
         private System.Windows.Forms.ComboBox CmbAracMusaitMi;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button BtnAnaSayfa;
     }
 }

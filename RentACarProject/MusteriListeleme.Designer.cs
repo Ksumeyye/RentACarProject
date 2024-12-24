@@ -49,6 +49,7 @@
             this.MskEhliyetTarih = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.BtnListele = new System.Windows.Forms.Button();
+            this.BtnAnaSayfa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,7 +164,7 @@
             this.BtnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnGuncelle.Location = new System.Drawing.Point(146, 376);
             this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(175, 40);
+            this.BtnGuncelle.Size = new System.Drawing.Size(175, 26);
             this.BtnGuncelle.TabIndex = 24;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = false;
@@ -183,9 +184,9 @@
             // 
             this.BtnSil.BackColor = System.Drawing.Color.Orange;
             this.BtnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnSil.Location = new System.Drawing.Point(1317, 52);
+            this.BtnSil.Location = new System.Drawing.Point(1186, 376);
             this.BtnSil.Name = "BtnSil";
-            this.BtnSil.Size = new System.Drawing.Size(64, 40);
+            this.BtnSil.Size = new System.Drawing.Size(114, 26);
             this.BtnSil.TabIndex = 27;
             this.BtnSil.Text = "Sil";
             this.BtnSil.UseVisualStyleBackColor = false;
@@ -231,13 +232,25 @@
             // 
             this.BtnListele.BackColor = System.Drawing.Color.PapayaWhip;
             this.BtnListele.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnListele.Location = new System.Drawing.Point(1307, 114);
+            this.BtnListele.Location = new System.Drawing.Point(719, 377);
             this.BtnListele.Name = "BtnListele";
-            this.BtnListele.Size = new System.Drawing.Size(90, 38);
+            this.BtnListele.Size = new System.Drawing.Size(106, 25);
             this.BtnListele.TabIndex = 32;
             this.BtnListele.Text = "Listele";
             this.BtnListele.UseVisualStyleBackColor = false;
             this.BtnListele.Click += new System.EventHandler(this.BtnListele_Click);
+            // 
+            // BtnAnaSayfa
+            // 
+            this.BtnAnaSayfa.BackColor = System.Drawing.Color.Red;
+            this.BtnAnaSayfa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnAnaSayfa.Location = new System.Drawing.Point(1186, 12);
+            this.BtnAnaSayfa.Name = "BtnAnaSayfa";
+            this.BtnAnaSayfa.Size = new System.Drawing.Size(115, 20);
+            this.BtnAnaSayfa.TabIndex = 33;
+            this.BtnAnaSayfa.Text = "Ana Sayfaya Dön";
+            this.BtnAnaSayfa.UseVisualStyleBackColor = false;
+            this.BtnAnaSayfa.Click += new System.EventHandler(this.BtnAnaSayfa_Click);
             // 
             // MusteriListeleme
             // 
@@ -245,7 +258,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Crimson;
-            this.ClientSize = new System.Drawing.Size(1411, 428);
+            this.ClientSize = new System.Drawing.Size(1317, 428);
+            this.Controls.Add(this.BtnAnaSayfa);
             this.Controls.Add(this.BtnListele);
             this.Controls.Add(this.MskEhliyetTarih);
             this.Controls.Add(this.label8);
@@ -301,5 +315,6 @@
         private System.Windows.Forms.MaskedTextBox MskEhliyetTarih;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button BtnListele;
+        private System.Windows.Forms.Button BtnAnaSayfa;
     }
 }

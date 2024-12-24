@@ -51,6 +51,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnAnaSayfa = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -84,10 +85,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(34, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 29);
+            this.label1.Size = new System.Drawing.Size(138, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Toplam Araç Sayısı:";
             // 
@@ -114,10 +115,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(12, 16);
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(42, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(210, 26);
+            this.label4.Size = new System.Drawing.Size(155, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "Toplam Müşteri Sayısı:";
             // 
@@ -144,10 +145,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(20, 13);
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(34, 23);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(205, 29);
+            this.label6.Size = new System.Drawing.Size(135, 19);
             this.label6.TabIndex = 0;
             this.label6.Text = "Müsait Araç Sayısı:";
             // 
@@ -174,10 +175,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(0, 23);
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(21, 23);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(279, 23);
+            this.label8.Size = new System.Drawing.Size(232, 19);
             this.label8.TabIndex = 0;
             this.label8.Text = "Günlük Ücreti En Fazla Olan Araç:";
             // 
@@ -234,10 +235,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label16.Location = new System.Drawing.Point(-5, 19);
+            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.Location = new System.Drawing.Point(36, 26);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(226, 26);
+            this.label16.Size = new System.Drawing.Size(165, 19);
             this.label16.TabIndex = 0;
             this.label16.Text = "Toplam Sözleşme Sayısı:";
             // 
@@ -264,22 +265,34 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(13, 21);
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(21, 22);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(211, 21);
+            this.label10.Size = new System.Drawing.Size(193, 19);
             this.label10.TabIndex = 0;
             this.label10.Text = "Müsait Olmayan Araç Sayısı:";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(750, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(746, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(275, 117);
+            this.pictureBox1.Size = new System.Drawing.Size(275, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // BtnAnaSayfa
+            // 
+            this.BtnAnaSayfa.BackColor = System.Drawing.Color.Red;
+            this.BtnAnaSayfa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnAnaSayfa.Location = new System.Drawing.Point(836, 137);
+            this.BtnAnaSayfa.Name = "BtnAnaSayfa";
+            this.BtnAnaSayfa.Size = new System.Drawing.Size(117, 23);
+            this.BtnAnaSayfa.TabIndex = 7;
+            this.BtnAnaSayfa.Text = "Ana Sayfaya Dön";
+            this.BtnAnaSayfa.UseVisualStyleBackColor = false;
+            this.BtnAnaSayfa.Click += new System.EventHandler(this.BtnAnaSayfa_Click);
             // 
             // FrmIstatistik
             // 
@@ -287,6 +300,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1037, 346);
+            this.Controls.Add(this.BtnAnaSayfa);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel7);
@@ -300,7 +314,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmIstatistik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "İstatistikler";
+            this.Text = "İstatistikler Sayfası";
             this.Load += new System.EventHandler(this.FrmIstatistik_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -345,5 +359,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button BtnAnaSayfa;
     }
 }

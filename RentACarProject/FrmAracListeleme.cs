@@ -90,5 +90,12 @@ namespace RentACarProject
             CmbAracMusaitMi.Text = dataGridView1.Rows[secilen].Cells[10].Value.ToString();
 
         }
+
+        private void BtnAnaSayfa_Click(object sender, EventArgs e)
+        {
+            Form1 fr = new Form1();
+            fr.Show();
+            this.Hide();
+        }
     }
 }

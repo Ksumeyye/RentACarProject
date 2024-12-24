@@ -29,5 +29,12 @@ namespace RentACarProject
             label7.Text = (from x in db.TblArac orderby x.GunlukKiraUcreti descending select x.Marka +" "+ x.Seri).FirstOrDefault();
             //label7.Text = db.TblArac.Max(x => x.GunlukKiraUcreti).ToString();
         }
+
+        private void BtnAnaSayfa_Click(object sender, EventArgs e)
+        {
+            Form1 fr = new Form1();
+            fr.Show();
+            this.Hide();
+        }
     }
 }

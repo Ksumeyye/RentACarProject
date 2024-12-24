@@ -53,6 +53,7 @@
             this.MskAracTarih = new System.Windows.Forms.MaskedTextBox();
             this.BtnAracKaydet = new System.Windows.Forms.Button();
             this.BtnListele = new System.Windows.Forms.Button();
+            this.BtnAnaSayfa = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -285,7 +286,7 @@
             this.BtnAracKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnAracKaydet.Location = new System.Drawing.Point(605, 122);
             this.BtnAracKaydet.Name = "BtnAracKaydet";
-            this.BtnAracKaydet.Size = new System.Drawing.Size(121, 35);
+            this.BtnAracKaydet.Size = new System.Drawing.Size(121, 27);
             this.BtnAracKaydet.TabIndex = 23;
             this.BtnAracKaydet.Text = "Kaydet";
             this.BtnAracKaydet.UseVisualStyleBackColor = false;
@@ -295,7 +296,7 @@
             // 
             this.BtnListele.BackColor = System.Drawing.Color.SandyBrown;
             this.BtnListele.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnListele.Location = new System.Drawing.Point(605, 163);
+            this.BtnListele.Location = new System.Drawing.Point(605, 155);
             this.BtnListele.Name = "BtnListele";
             this.BtnListele.Size = new System.Drawing.Size(121, 23);
             this.BtnListele.TabIndex = 27;
@@ -303,12 +304,25 @@
             this.BtnListele.UseVisualStyleBackColor = false;
             this.BtnListele.Click += new System.EventHandler(this.BtnListele_Click);
             // 
+            // BtnAnaSayfa
+            // 
+            this.BtnAnaSayfa.BackColor = System.Drawing.Color.Red;
+            this.BtnAnaSayfa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnAnaSayfa.Location = new System.Drawing.Point(605, 184);
+            this.BtnAnaSayfa.Name = "BtnAnaSayfa";
+            this.BtnAnaSayfa.Size = new System.Drawing.Size(121, 23);
+            this.BtnAnaSayfa.TabIndex = 28;
+            this.BtnAnaSayfa.Text = "Ana Sayfaya Dön";
+            this.BtnAnaSayfa.UseVisualStyleBackColor = false;
+            this.BtnAnaSayfa.Click += new System.EventHandler(this.BtnAnaSayfa_Click);
+            // 
             // AracKayitSayfasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Crimson;
-            this.ClientSize = new System.Drawing.Size(800, 207);
+            this.ClientSize = new System.Drawing.Size(800, 226);
+            this.Controls.Add(this.BtnAnaSayfa);
             this.Controls.Add(this.BtnListele);
             this.Controls.Add(this.BtnAracKaydet);
             this.Controls.Add(this.MskAracTarih);
@@ -370,5 +384,6 @@
         private System.Windows.Forms.MaskedTextBox MskAracTarih;
         private System.Windows.Forms.Button BtnAracKaydet;
         private System.Windows.Forms.Button BtnListele;
+        private System.Windows.Forms.Button BtnAnaSayfa;
     }
 }

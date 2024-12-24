@@ -48,6 +48,7 @@
             this.TxtMusteriID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.CmbSozlesmeID = new System.Windows.Forms.ComboBox();
+            this.BtnAnaSayfa = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TxtMusteriAd
@@ -222,12 +223,25 @@
             this.CmbSozlesmeID.Size = new System.Drawing.Size(175, 21);
             this.CmbSozlesmeID.TabIndex = 21;
             // 
+            // BtnAnaSayfa
+            // 
+            this.BtnAnaSayfa.BackColor = System.Drawing.Color.Red;
+            this.BtnAnaSayfa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnAnaSayfa.Location = new System.Drawing.Point(178, 412);
+            this.BtnAnaSayfa.Name = "BtnAnaSayfa";
+            this.BtnAnaSayfa.Size = new System.Drawing.Size(175, 23);
+            this.BtnAnaSayfa.TabIndex = 22;
+            this.BtnAnaSayfa.Text = "Ana Sayfaya Dön";
+            this.BtnAnaSayfa.UseVisualStyleBackColor = false;
+            this.BtnAnaSayfa.Click += new System.EventHandler(this.BtnAnaSayfa_Click);
+            // 
             // FrmMusteriEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Crimson;
-            this.ClientSize = new System.Drawing.Size(371, 421);
+            this.ClientSize = new System.Drawing.Size(371, 447);
+            this.Controls.Add(this.BtnAnaSayfa);
             this.Controls.Add(this.CmbSozlesmeID);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -279,5 +293,6 @@
         private System.Windows.Forms.TextBox TxtMusteriID;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox CmbSozlesmeID;
+        private System.Windows.Forms.Button BtnAnaSayfa;
     }
 }

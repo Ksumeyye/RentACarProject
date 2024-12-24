@@ -40,5 +40,12 @@ namespace RentACarProject
             db.SaveChanges(); //Değişiklikleri Kaydet.
             MessageBox.Show("Müşteri Eklendi.");
         }
+
+        private void BtnAnaSayfa_Click(object sender, EventArgs e)
+        {
+            Form1 fr = new Form1();
+            fr.Show();
+            this.Hide();
+        }
     }
 }

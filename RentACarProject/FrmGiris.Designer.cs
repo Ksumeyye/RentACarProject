@@ -34,6 +34,7 @@
             this.TxtKullaniciAd = new System.Windows.Forms.TextBox();
             this.TxtSifre = new System.Windows.Forms.TextBox();
             this.BtnGiris = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -82,12 +83,23 @@
             this.BtnGiris.UseVisualStyleBackColor = true;
             this.BtnGiris.Click += new System.EventHandler(this.BtnGiris_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(57, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(157, 28);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Pierre Rent A Car";
+            // 
             // FrmGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Crimson;
             this.ClientSize = new System.Drawing.Size(285, 207);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.BtnGiris);
             this.Controls.Add(this.TxtSifre);
             this.Controls.Add(this.TxtKullaniciAd);
@@ -112,5 +124,6 @@
         private System.Windows.Forms.TextBox TxtKullaniciAd;
         private System.Windows.Forms.TextBox TxtSifre;
         private System.Windows.Forms.Button BtnGiris;
+        private System.Windows.Forms.Label label3;
     }
 }
