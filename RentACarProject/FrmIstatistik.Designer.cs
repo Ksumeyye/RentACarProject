@@ -159,7 +159,7 @@
             this.panel4.Controls.Add(this.label8);
             this.panel4.Location = new System.Drawing.Point(746, 176);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(279, 158);
+            this.panel4.Size = new System.Drawing.Size(327, 158);
             this.panel4.TabIndex = 2;
             // 
             // label7
@@ -176,7 +176,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(21, 23);
+            this.label8.Location = new System.Drawing.Point(48, 23);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(232, 19);
             this.label8.TabIndex = 0;
@@ -277,7 +277,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(746, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(275, 109);
+            this.pictureBox1.Size = new System.Drawing.Size(327, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -286,7 +286,7 @@
             // 
             this.BtnAnaSayfa.BackColor = System.Drawing.Color.Red;
             this.BtnAnaSayfa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnAnaSayfa.Location = new System.Drawing.Point(836, 137);
+            this.BtnAnaSayfa.Location = new System.Drawing.Point(855, 136);
             this.BtnAnaSayfa.Name = "BtnAnaSayfa";
             this.BtnAnaSayfa.Size = new System.Drawing.Size(117, 23);
             this.BtnAnaSayfa.TabIndex = 7;
@@ -299,7 +299,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(1037, 346);
+            this.ClientSize = new System.Drawing.Size(1083, 346);
             this.Controls.Add(this.BtnAnaSayfa);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel5);

@@ -46,8 +46,6 @@
             this.MskEhliyetTarih = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TxtMusteriID = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.CmbSozlesmeID = new System.Windows.Forms.ComboBox();
             this.BtnAnaSayfa = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -160,7 +158,7 @@
             // 
             this.BtnEkle.BackColor = System.Drawing.Color.PapayaWhip;
             this.BtnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnEkle.Location = new System.Drawing.Point(178, 371);
+            this.BtnEkle.Location = new System.Drawing.Point(178, 328);
             this.BtnEkle.Name = "BtnEkle";
             this.BtnEkle.Size = new System.Drawing.Size(175, 34);
             this.BtnEkle.TabIndex = 14;
@@ -205,29 +203,11 @@
             this.TxtMusteriID.Size = new System.Drawing.Size(175, 20);
             this.TxtMusteriID.TabIndex = 1;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(69, 325);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 20);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Sözleşme:";
-            // 
-            // CmbSozlesmeID
-            // 
-            this.CmbSozlesmeID.FormattingEnabled = true;
-            this.CmbSozlesmeID.Location = new System.Drawing.Point(178, 325);
-            this.CmbSozlesmeID.Name = "CmbSozlesmeID";
-            this.CmbSozlesmeID.Size = new System.Drawing.Size(175, 21);
-            this.CmbSozlesmeID.TabIndex = 21;
-            // 
             // BtnAnaSayfa
             // 
             this.BtnAnaSayfa.BackColor = System.Drawing.Color.Red;
             this.BtnAnaSayfa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnAnaSayfa.Location = new System.Drawing.Point(178, 412);
+            this.BtnAnaSayfa.Location = new System.Drawing.Point(178, 379);
             this.BtnAnaSayfa.Name = "BtnAnaSayfa";
             this.BtnAnaSayfa.Size = new System.Drawing.Size(175, 23);
             this.BtnAnaSayfa.TabIndex = 22;
@@ -240,10 +220,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Crimson;
-            this.ClientSize = new System.Drawing.Size(371, 447);
+            this.ClientSize = new System.Drawing.Size(371, 418);
             this.Controls.Add(this.BtnAnaSayfa);
-            this.Controls.Add(this.CmbSozlesmeID);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.TxtMusteriID);
             this.Controls.Add(this.MskEhliyetTarih);
@@ -291,8 +269,6 @@
         private System.Windows.Forms.MaskedTextBox MskEhliyetTarih;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TxtMusteriID;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox CmbSozlesmeID;
         private System.Windows.Forms.Button BtnAnaSayfa;
     }
 }
