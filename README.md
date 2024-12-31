@@ -1,5 +1,5 @@
 # Rent A Car Project (Araç Kiralama Sistemi)<br/>
-✨ C# programlama dilinde, WinFormApp (.Net Framework), Entity Framework DbFirst kullanılarak oluşturduğum projemdir. Sisteme Kullanıcı Adı ve Şifre ile giriş yapılır. Giriş yapıldıktan sonra Giriş ekranı ile araç kiralama işlemlerini görüntüleriz ve yapmak istediğimiz işlemi seçeriz. Seçtiğimiz işlem ile ilgili sayfa açılır.<br/>
+✨ C# programlama dilinde, WinFormApp (.Net Framework), Entity Framework DbFirst kullanarak oluşturduğum projemdir. Sisteme Kullanıcı Adı ve Şifre ile giriş yapılır. Giriş yapıldıktan sonra Giriş ekranı ile araç kiralama işlemlerini görüntüleriz ve yapmak istediğimiz işlemi seçeriz. Seçtiğimiz işlem ile ilgili sayfa açılır.<br/>
 ✨Giriş ekranında Müşteri Ekleme, Müşteri Listeleme, Araç Kayıt, Araç Listeleme, Sözleşme, İstatistikler ve Çıkış işlemi bulunur. <br/>
 ✨Müşteri Ekleme panelinde müşteri kayıt işlemi yapılır.<br/>
 ✨Müşteri listeleme panelinde güncelleme, silme ve listeleme işlemleri yapılır. İsteğe göre ana sayfaya dönülebilinir.<br/>
